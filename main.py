@@ -31,6 +31,7 @@ def get_number_of_lines():
 def main():
     balance = deposit()
     lines = get_number_of_lines()
+    print(balance, lines)
 
 
 main()
