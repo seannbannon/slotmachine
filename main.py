@@ -8,6 +8,13 @@ MIN_BET = 1
 ROWS = 3
 COL = 3
 
+symbol_count = {
+    "7s": 2,
+    "Bar": 4,
+    "Cherries": 6,
+    "Bells": 8
+}
+
 def deposit():
     while True:
         amount = input("What would you like to deposit? $")
