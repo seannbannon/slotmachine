@@ -6,7 +6,7 @@ MAX_BET = 100
 MIN_BET = 1
 
 ROWS = 3
-COL = 3
+COLS = 3
 
 symbol_count = {
     "7s": 2,
@@ -47,7 +47,8 @@ def get_slot_machine_spin(rows, cols, symbols):
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
-            if i != le(columns) -1:  
+# basically print a pipe if its between the columns
+            if i != len(columns) -1:  
                 print(column[row], "|")
             else:
                 print(column[row])
@@ -108,5 +109,7 @@ def main():
 
     print(f"You are betting ${bet} on {lines} lines. Your total bet is equal to: ${total_bet}. Good luck.")
 
+    slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
+    print_slot_machine(slots)
 
 main()
