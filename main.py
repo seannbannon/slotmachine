@@ -21,7 +21,6 @@ def get_slot_machine_spin(rows, cols, symbols):
         for _ in range(symbol_count):
             all_symbols.append(symbol)
 
-
 # what values go in each column
 # define columns list
     columns =[]
@@ -44,6 +43,14 @@ def get_slot_machine_spin(rows, cols, symbols):
         columns.append(column)
 
     return columns
+
+def print_slot_machine(columns):
+    for row in range(len(columns[0])):
+        for i, column in enumerate(columns):
+            if i != le(columns) -1:  
+                print(column[row], "|")
+            else:
+                print(column[row])
 
 def deposit():
     while True:
