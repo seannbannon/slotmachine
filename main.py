@@ -43,6 +43,8 @@ def get_slot_machine_spin(rows, cols, symbols):
 # add column to our columns list
         columns.append(column)
 
+    return columns
+
 def deposit():
     while True:
         amount = input("What would you like to deposit? $")
