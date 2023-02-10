@@ -23,18 +23,25 @@ def get_slot_machine_spin(rows, cols, symbols):
 
 
 # what values go in each column
+# define columns list
     columns =[]
+# generate a column for each number of columns
+# picks random values for each row in column
     for _ in range(cols):
         column = []
-        # [:] creates a copy of the list-- so we dont select something twice
+# [:] creates a copy of the list-- so we dont select something twice
+# current symbols is equal to A COPY of all symbols
         current_symbols = all_symbols[:]
+# loop through number of values we need to generate (equal to the number of rows we have in slot machine)
         for _ in range (rows):
+# first value we are picking is a Random Choice of all the symbols
             value = random.choice(all_symbols)
+# remove the value so we dont pick it again
             current_symbols.remove(value)
-            # add value to column
+# add value to column (up top)
             column.append(value)
-
-
+# add column to our columns list
+        columns.append(column)
 
 def deposit():
     while True:
