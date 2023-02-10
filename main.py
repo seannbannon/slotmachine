@@ -49,9 +49,9 @@ def print_slot_machine(columns):
         for i, column in enumerate(columns):
 # basically print a pipe if its between the columns
             if i != len(columns) -1:  
-                print(column[row], "|")
+                print(column[row],  end=" | ")
             else:
-                print(column[row])
+                print(column[row], end ="")
 
 def deposit():
     while True:
