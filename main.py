@@ -15,7 +15,7 @@ symbol_count = {
     "Bells": 8
 }
 
-def get_slot_machine_spin(rows, cols, symbols):
+def get_slot_machine_spin(rows, cols, symbol):
     all_symbols = []
     for symbol, symbol_count in symbol.items():
         for _ in range(symbol_count):
@@ -34,7 +34,7 @@ def get_slot_machine_spin(rows, cols, symbols):
 # loop through number of values we need to generate (equal to the number of rows we have in slot machine)
         for _ in range (rows):
 # first value we are picking is a Random Choice of all the symbols
-            value = random.choice(all_symbols)
+            value = random.choice(current_symbols)
 # remove the value so we dont pick it again
             current_symbols.remove(value)
 # add value to column (up top)
@@ -52,6 +52,8 @@ def print_slot_machine(columns):
                 print(column[row],  end=" | ")
             else:
                 print(column[row], end ="")
+
+        print()
 
 def deposit():
     while True:
