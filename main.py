@@ -15,6 +15,16 @@ symbol_count = {
     "Bells": 8
 }
 
+symbol_value = {
+    "Seven": 5,
+    "Baarr": 4,
+    "Chery": 3,
+    "Bells": 2
+}
+
+# def check_winnings(columns, lines, bet, values):
+
+
 def get_slot_machine_spin(rows, cols, symbol):
     all_symbols = []
     for symbol, symbol_count in symbol.items():
